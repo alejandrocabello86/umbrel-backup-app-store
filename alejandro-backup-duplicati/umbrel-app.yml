@@ -1,30 +1,30 @@
 manifestVersion: 1
-id: sparkles-hello-world
-name: Hello World
-tagline: Replace this tagline with your app's tagline
-icon: https://svgur.com/i/mvA.svg
-category: Development
+
+id: alejandro-backup-duplicati
+category: files
+name: Duplicati Backup
 version: "2.4.0.1"
-port: 4000
+tagline: Backup de Immich y Nextcloud
+
 description: >-
-  Add your app's description here.
+  Duplicati personalizado para realizar copias de seguridad de
+  Immich y Nextcloud almacenados en el disco externo del Umbrel.
 
-
-  You can also add newlines!
-
-developer: Umbrel
-website: https://umbrel.com
-submitter: Umbrel
-submission: https://github.com/alejandrocabello86/umbrel-backup-app-store
-repo: https://github.com/getumbrel/umbrel-hello-world-app
-support: https://github.com/getumbrel/umbrel-hello-world-app/issues
-gallery:
-  - https://i.imgur.com/yyVG0Jb.jpeg
-  - https://i.imgur.com/yyVG0Jb.jpeg
-  - https://i.imgur.com/yyVG0Jb.jpeg
-releaseNotes: >-
-  Add what's new in the latest version of your app here.
+developer: Duplicati
+website: https://duplicati.com
 dependencies: []
+repo: https://github.com/duplicati/duplicati
+support: https://forum.duplicati.com
+
+port: 8200
+gallery: []
 path: ""
+
 defaultUsername: ""
 defaultPassword: ""
+
+releaseNotes: >-
+  Primera versión de la aplicación personalizada de backup.
+
+submitter: Alejandro
+submission: https://github.com/alejandrocabello86/umbrel-backup-app-store
