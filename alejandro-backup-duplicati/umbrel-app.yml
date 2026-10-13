@@ -15,7 +15,7 @@ website: https://duplicati.com
 dependencies: []
 repo: https://github.com/duplicati/duplicati
 support: https://forum.duplicati.com
-icon: https://raw.githubusercontent.com/alejandrocabello86/umbrel-backup-app-store/main/alejandro-backup-duplicati/icon.svg
+icon: https://raw.githubusercontent.com/alejandrocabello86/umbrel-backup-app-store/main/alejandro-backup-duplicati/duplicati-icon.svg
 port: 8200
 gallery: []
 path: ""
