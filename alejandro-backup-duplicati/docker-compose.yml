@@ -18,6 +18,17 @@ services:
 
     volumes:
       - ${APP_DATA_DIR}/data:/data
-
       - "/data/umbrel-os/home/umbrel/umbrel/external/HD NAS/immich:/source/immich:ro"
       - "/data/umbrel-os/home/umbrel/umbrel/external/HD NAS/nextcloud:/source/nextcloud:ro"
+
+  wol_helper:
+    image: python:3.12-alpine
+    restart: on-failure
+    network_mode: host
+
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+
+    command:
+      - python3
+      - /data/scripts/wol-helper.py
