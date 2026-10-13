@@ -1,14 +1,23 @@
 version: "3.7"
 
 services:
-
   app_proxy:
     environment:
-      # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: sparkles-hello-world_server_1
-      APP_PORT: 3000
-    
-  server:
-    image: getumbrel/community-app-store-hello-world:latest
-    user: "1000:1000"
-    init: true
+      APP_HOST: alejandro-backup-duplicati_duplicati_1
+      APP_PORT: 8200
+
+  duplicati:
+    image: duplicati/duplicati:2.4.0.1-stable
+    restart: on-failure
+    stop_grace_period: 1m
+
+    environment:
+      DUPLICATI__WEBSERVICE_PASSWORD: "${APP_PASSWORD}"
+      DUPLICATI__WEBSERVICE_ALLOWED_HOSTNAMES: "*"
+      SETTINGS_ENCRYPTION_KEY: "${APP_SEED}"
+
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+
+      - "/data/umbrel-os/home/umbrel/umbrel/external/HD NAS/immich:/source/immich:ro"
+      - "/data/umbrel-os/home/umbrel/umbrel/external/HD NAS/nextcloud:/source/nextcloud:ro"
