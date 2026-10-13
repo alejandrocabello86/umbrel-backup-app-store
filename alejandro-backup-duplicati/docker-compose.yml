@@ -12,7 +12,6 @@ services:
     stop_grace_period: 1m
 
     environment:
-      DUPLICATI__WEBSERVICE_PASSWORD: "${APP_PASSWORD}"
       DUPLICATI__WEBSERVICE_ALLOWED_HOSTNAMES: "*"
       SETTINGS_ENCRYPTION_KEY: "${APP_SEED}"
 
