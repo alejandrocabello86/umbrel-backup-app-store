@@ -3,7 +3,7 @@ manifestVersion: 1
 id: alejandro-backup-duplicati
 category: files
 name: Duplicati Backup
-version: "2.4.0.1"
+version: "2.4.0.1-patch.1"
 tagline: Backup de Immich y Nextcloud
 
 description: >-
@@ -24,7 +24,9 @@ defaultUsername: ""
 defaultPassword: ""
 
 releaseNotes: >-
-  Primera versión de la aplicación personalizada de backup.
+  Añadido soporte Wake-on-LAN para despertar automáticamente
+  el PC de destino antes de realizar el backup.
+  Añadido icono oficial de Duplicati.
 
 submitter: Alejandro
 submission: https://github.com/alejandrocabello86/umbrel-backup-app-store
