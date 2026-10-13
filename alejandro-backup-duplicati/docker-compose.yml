@@ -31,3 +31,14 @@ services:
     command:
       - python3
       - /data/scripts/wol-helper.py
+
+  shutdown_helper:
+    image: alpine/git:2.52.0
+    restart: on-failure
+
+    volumes:
+      - ${APP_DATA_DIR}/data/scripts:/scripts
+
+    entrypoint:
+      - /bin/sh
+      - /scripts/shutdown-helper.sh
